@@ -5,13 +5,13 @@
 class Renmy < Formula
   desc "Local Apex test runner for Salesforce developers"
   homepage "https://renmy.net"
-  version "1.64.0"
+  version "1.65.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/renmy-solutions/renmy/releases/download/v1.64.0/renmy_1.64.0_darwin_amd64.tar.gz"
-      sha256 "a38d0dcf1652282d47a644b4c8c19f71a72012329cffc892c984d220eeb08e5c"
+      url "https://github.com/renmy-solutions/renmy/releases/download/v1.65.0/renmy_1.65.0_darwin_amd64.tar.gz"
+      sha256 "da73acc58cc8072092f98333cac7743e74afc537171aacee0f62cdc598b8cc10"
 
       define_method(:install) do
         bin.install "renmy"
@@ -19,8 +19,8 @@ class Renmy < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/renmy-solutions/renmy/releases/download/v1.64.0/renmy_1.64.0_darwin_arm64.tar.gz"
-      sha256 "76ec0c79a26f26a8cf56be1410d3a2ea2c8fd36789322236cc0b107b602c130a"
+      url "https://github.com/renmy-solutions/renmy/releases/download/v1.65.0/renmy_1.65.0_darwin_arm64.tar.gz"
+      sha256 "cf0527191a560331e269a658a6edfbd22e164432b398f920f75f53dd6621ceb0"
 
       define_method(:install) do
         bin.install "renmy"
@@ -31,16 +31,16 @@ class Renmy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/renmy-solutions/renmy/releases/download/v1.64.0/renmy_1.64.0_linux_amd64.tar.gz"
-      sha256 "40d5dd572145322083afbcf21526462c977a2b5933b5ca4766d430a9102c6120"
+      url "https://github.com/renmy-solutions/renmy/releases/download/v1.65.0/renmy_1.65.0_linux_amd64.tar.gz"
+      sha256 "4c510233c4c86b771e8c4dac865166e6eba4c3490c83e93b43870d38687b36fe"
       define_method(:install) do
         bin.install "renmy"
         bin.install_symlink bin/"renmy" => "nimbus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/renmy-solutions/renmy/releases/download/v1.64.0/renmy_1.64.0_linux_arm64.tar.gz"
-      sha256 "f091d47f33ae2f2f44933f27b1a2272fdbdb34e4d860e85cbd9237ac0f89a7a1"
+      url "https://github.com/renmy-solutions/renmy/releases/download/v1.65.0/renmy_1.65.0_linux_arm64.tar.gz"
+      sha256 "c8f84ca687846f4e3bae0d2dd4c9563ed2fb0ce26a5bfc23911680bc8ea83811"
       define_method(:install) do
         bin.install "renmy"
         bin.install_symlink bin/"renmy" => "nimbus"
